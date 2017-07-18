@@ -1,0 +1,23 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "notes-app",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Corina/notes_js"
+  },
+  "author": "Corina Gheorghe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Corina/notes_js/issues"
+  },
+  "homepage": "https://github.com/Corina/notes_js"
+}

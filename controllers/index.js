@@ -1,4 +1,8 @@
-noteController = new NoteController();
-noteController.noteList.createNote("Favourite drink: seltzer");
-noteListView = new NoteListView(noteList);
-noteListView.createHtmlList();
+
+
+window.onload = function() {
+  var list = document.getElementById('app')
+  noteList = new NoteList();
+  noteController = new NoteController(noteList);
+  noteController.insertTextToApp(list)
+}

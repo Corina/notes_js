@@ -1,19 +1,12 @@
 (function(exports) {
-  function NoteController() {
-    var newNoteList = new NoteList();
+  function NoteController(noteList) {
     noteList.createNote("something");
-    var noteListView = new NoteListView(newNoteList);
+    this.noteListView = new NoteListView(noteList);
   };
-
-  NoteController.prototype.insertTextToApp = function() {
-    return noteListView.createHtmlList();
+  
+  NoteController.prototype.insertTextToApp = function(element) {
+    element.innerHTML = this.noteListView.createHtmlList();
   };
-
+  
   exports.NoteController = NoteController;
 })(this);
-
-window.onload = function() {
-  var list = document.getElementById('app')
-  noteController = new NoteController();
-  list.innerHTML = noteController.insertTextToApp();
-}

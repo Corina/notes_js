@@ -7,6 +7,6 @@ it("is initialized with an empty array",function() {
 it("Creates a note", function() {
   var noteList = new NoteList();
   noteList.createNote("hello");
-  result = noteList.showNotes()[0].showText();
+  var result = noteList.showNotes()[0].showText();
   assertEquals(result, "hello");
 });
