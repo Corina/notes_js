@@ -17,7 +17,7 @@ it("it returns a string of HTML that represents the note list model", function (
 it("it returns <ul></ul> that represents the note list model", function () {
   var noteList = new NoteList();
   var noteListView = new NoteListView(noteList);
-  var htmlResult = "<ul></ul>";
+  var htmlResult = "";
   assertEquals(noteListView.createHtmlList(), htmlResult);
 });
 
