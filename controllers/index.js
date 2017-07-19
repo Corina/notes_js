@@ -4,6 +4,5 @@ noteList.createNote("Favourite drink: seltzer");
 
 window.onload = function() {
   element = document.getElementById("app");
-  console.log(element);
   noteController.setHtml(element);
 };

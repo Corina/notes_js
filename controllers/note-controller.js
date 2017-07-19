@@ -1,13 +1,12 @@
 (function(exports) {
-function NoteController(noteList) {
-this.noteList = noteList;
-this.noteListView = new NoteListView(noteList);
-};
+  function NoteController(noteList) {
+    this.noteList = noteList;
+    this.noteListView = new NoteListView(noteList);
+  };
 
-NoteController.prototype.setHtml = function (element) {
-console.log(element);
-element.innerHTML = this.noteListView.createHtmlList();
-};
+  NoteController.prototype.setHtml = function (element) {
+    element.innerHTML = this.noteListView.createHtmlList();
+  };
 
-exports.NoteController = NoteController;
+  exports.NoteController = NoteController;
 })(this);
