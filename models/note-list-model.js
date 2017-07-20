@@ -9,8 +9,10 @@
   
   NoteList.prototype.createNote = function (text) {
     note = new Note(text);
-    (this._notes).push(note)
+    (this._notes).push(note);
+    console.log(this._notes);
   };
   
   exports.NoteList = NoteList;
+  
 })(this);

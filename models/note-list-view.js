@@ -9,7 +9,7 @@
   
   NoteListView.prototype.htmlForEachNote = function () {
     return this.noteList.showNotes().map(function(note) {
-      return "<li><div>" + note.showText() + "</div></li>"
+      return "<li><div>" + note.showText().substring(0, 20) + "</div></li>"
     }).join("");
   };
   
