@@ -1,5 +1,5 @@
 (function(exports) {
-  function Note(text) {
+  function Note(text, id) {
     this._text = text;
     this.id = this.setUniqueId();
   };
