@@ -2,9 +2,11 @@
 window.onload = function() {
   var list = document.getElementById('app')
   var noteList = new NoteList();
-  noteList.createNote("something");
+  noteList.createNote("This is a long line, sooooooo long");
+  noteList.createNote("TGI Friday, yeahhhhhh!");
+  noteList.createNote("Buy more ice cream, BUY ALL THE ICE CREAM!");
   var noteController = new NoteController(noteList);
-  noteController.insertTextToApp(list)
+  noteController.setHtml(list)
   
   makeUrlChange();
   
@@ -20,12 +22,22 @@ window.onload = function() {
     return location.hash.split("#")[1];
   };
   
-  function showNote(note_id) {
-    console.log((new NoteView(noteList.showNotes()[note_id])).getHtml());
-    var note = noteList.showNotes()[note_id]
+  
+  function getNoteMatchingId(noteId) {
+    var noteMatching;
+    noteList.showNotes().forEach(function(note) {
+      if (note.id == noteId) {
+        noteMatching = note;
+      }
+    });
+    return noteMatching;
+  };
+  
+  function showNote(noteId) {
+    var note = getNoteMatchingId(noteId);
     var noteView = new NoteView(note);
     document
-    .getElementById("note")
+    .getElementById("app")
     .innerHTML = noteView.getHtml();
   };
   
