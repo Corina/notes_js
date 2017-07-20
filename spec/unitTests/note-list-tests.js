@@ -1,12 +1,12 @@
-
-it("is initialized with an empty array",function() {
+(function() {
   var noteList = new NoteList();
-  assertEquals(noteList.showNotes().length, 0);
-});
-
-it("Creates a note", function() {
-  var noteList = new NoteList();
-  noteList.createNote("hello");
-  var result = noteList.showNotes()[0].showText();
-  assertEquals(result, "hello");
-});
+  it("note list is initialized with an empty array",function() {
+    assertEquals(noteList.showNotes().length, 0);
+  });
+  
+  it("note list creates a note", function() {
+    noteList.createNote("hello");
+    var result = noteList.showNotes()[0].showText();
+    assertEquals(result, "hello");
+  });
+})();
